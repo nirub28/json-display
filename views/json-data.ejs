@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON Data</title>
+    <link rel="stylesheet" href="css/json.css"> 
+</head>
+<body>
+    <div class="json-display">
+        <% if (jsonData) { %>
+            <h1>JSON Data:</h1>
+            <form>
+                <% for (const key in jsonData) { %>
+                    <div class="div-json">
+                    <label for="<%= key %>"><%= key %></label>
+                    <input type="text" id="<%= key %>" name="<%= key %>" value="<%= jsonData[key] %>"><br>
+                    </div>
+                    <% } %>
+            </form>
+        <% } else { %>
+            <p>No JSON data available.</p>
+        <% } %>
+    </div>
+</body>
+</html>
