@@ -2,11 +2,38 @@
 <html>
 <head>
     <title>JSON Form</title>
-    <link rel="stylesheet" href="assets/css/home.css"> 
+    <link rel="stylesheet" href="css/home.css"> 
+    <style>
+        .json-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.json-form textarea {
+    width: 30%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.json-form input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.json-form input[type="submit"]:hover {
+    background-color: #0056b3;
+    color:black;
+}
+    </style>
 </head>
 <body>
     <form action="/submit" method="post" class="json-form">
-        <textarea name="json_input" rows="10" cols="50" placeholder="Enter JSON text"></textarea><br>
+        <textarea name="json_input" rows="10" cols="50" placeholder="Enter JSON text" required></textarea><br>
         <input type="submit" value="Submit">
     </form>
 </body>
